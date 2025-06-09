@@ -42,3 +42,5 @@ route::get('/book_update/{id}', [AdminController::class, 'book_update']);
 
 route::post('/update_book/{id}', [AdminController::class, 'update_book']);
 
+route::get('/search', [AdminController::class, 'search']);
+

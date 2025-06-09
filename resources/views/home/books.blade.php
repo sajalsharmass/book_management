@@ -41,6 +41,13 @@
     book page
 
     
+    <form action="{{url('search')}}" method="get">
+        @csrf
+        <input type="search" name="search" placeholder="search book name">
+        <input type="submit" value="search">
+    </form>
+
+    <br>
 
     <div>
         <table>
@@ -48,7 +55,6 @@
                 <th>Book Name</th>
                 <th>Quantity</th>
                 <th>Author</th>
-                <th>Issue request</th>
             
             </tr>
 

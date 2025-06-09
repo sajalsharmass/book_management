@@ -69,6 +69,13 @@ class AdminController extends Controller
         return redirect('/books_page');
     }
 
+    public function search(Request $request){
+        $search = $request->search;
+        $data = books::where('book_title','like','%'.$search.'%')->get();
+
+        return view('home.books', compact('data'));
+    }
+
     
 }
 
